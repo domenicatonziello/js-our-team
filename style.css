@@ -6,9 +6,45 @@
 /** Generic */
 body{
     font-family: sans-serif;
+    background-color: rgb(245,245,241);
+    text-align: center;
+}
+img{
+    max-width: 100%;
+    display: block;
 }
 /** Utility */
 .container{
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+.container-small {
+    max-width: 500px;
+    margin: 40px auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+/* header */
+header h1{
+    margin: 20px;
+}
+/* main */
+.row .col{
+    flex-basis: calc(100% / 3);
+    min-height: 300px;
+    padding: 20px;
+    /* border: 1px dashed black; */
+}
+.card {
+    background-color: white;
+    /* border: 1px solid red; */
+}
+.card h3{
+    color: grey;
+    margin-bottom: 5px;
 }
