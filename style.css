@@ -38,11 +38,9 @@ header h1{
     flex-basis: calc(100% / 3);
     min-height: 300px;
     padding: 20px;
-    /* border: 1px dashed black; */
 }
 .card {
     background-color: white;
-    /* border: 1px solid red; */
 }
 .card h3{
     color: grey;

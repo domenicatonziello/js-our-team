@@ -23,6 +23,19 @@ Organizzare i singoli membri in card/schede e rendere la pagina gradevole (potet
 // prendo elementi dal DOM
 const row = document.querySelector('.row');
 
+// creo funzione per generare card
+const getCard = (member) => {
+    const card = 
+    `
+       <div class="card">
+            <img src="img/${member.image}" class="pb-10" alt="${member.image}">
+            <h3> ${member.name} </h3>
+            <p class="pb-10"> ${member.role} </p>
+        </div>
+    `
+    return card;
+}
+
 // creo array del team
 const team = [
     {
@@ -56,6 +69,8 @@ const team = [
         image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+
 let col = '';
 
 // stampo in console informazioni per ogni membro del team
@@ -67,16 +82,16 @@ for (let i = 0; i < team.length ; i++){
     console.log('Ruolo:'+ ' ' + member.role);
     // stampo l'img
     console.log('Img:'+ ' ' + member.image);
-    
+
+    // preparo la col e inserisco la funzione che genera la card
     col += 
-    ` <div class="col">
-          <div class="card">
-             <img src="img/${member.image}" class="pb-10" alt="${member.image}">
-             <h3> ${member.name} </h3>
-             <p class="pb-10"> ${member.role} </p>
-          </div>
-        </div>
     `
+        <div class= "col">
+            ${getCard(member)}
+        </div>
+    
+    ` 
+
 }
 
 // stampo in pagina
