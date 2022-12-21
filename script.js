@@ -56,3 +56,13 @@ const team = [
         image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+// stampo in console informazioni per ogni membro del team
+for (let i = 0; i < team.length ; i++){
+    const member = team[i];
+    // Stampo il nome 
+    console.log('-------------Nome'+ ' ' + member.name);
+    // stampo il ruolo
+    console.log('Ruolo:'+ ' ' + member.role);
+    // stampo l'img
+    console.log('Img:'+ ' ' + member.image);
+}
