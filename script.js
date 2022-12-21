@@ -56,7 +56,7 @@ const team = [
         image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
-
+let col = '';
 
 // stampo in console informazioni per ogni membro del team
 for (let i = 0; i < team.length ; i++){
@@ -67,15 +67,17 @@ for (let i = 0; i < team.length ; i++){
     console.log('Ruolo:'+ ' ' + member.role);
     // stampo l'img
     console.log('Img:'+ ' ' + member.image);
-
-    // stampo in pagina
-    row.innerHTML = 
-    `
-       <div class="col">
-                <div class="card">
-                    <img src="img/${member.image}" class="pb-10" alt="${member.image}">
-                    <h3> ${member.name} </h3>
-                    <p class="pb-10"> ${member.role} </p>
-                </div>
+    
+    col += 
+    ` <div class="col">
+          <div class="card">
+             <img src="img/${member.image}" class="pb-10" alt="${member.image}">
+             <h3> ${member.name} </h3>
+             <p class="pb-10"> ${member.role} </p>
+          </div>
+        </div>
     `
 }
+
+// stampo in pagina
+row.innerHTML = col;
